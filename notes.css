@@ -1,0 +1,237 @@
+*{
+
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(247, 246, 223);
+}
+.notes_container{
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+
+.nav-bar{
+    background-color: rgb(255, 179, 0);
+    padding: 1rem 2rem;
+}
+
+.nav-bar i span{
+    margin: 0px 15px;
+   color: rgb(255, 255, 253);
+}
+
+
+
+
+
+.search-bar{
+
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 1rem 0px;
+}
+
+.search-bar .input-field{
+
+    padding: 1rem 1.3rem;
+    font-size: 1.3rem;
+    width: 40%;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: rgb(255, 246, 227);
+
+}
+
+
+
+.add-btn{
+   display: flex;
+   justify-content: right;
+   margin: 1rem 1rem;
+     
+   
+}
+
+.addbutton i:hover{
+    animation: rotate 0.3s linear;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.add-btn button{
+    background-color: rgb(248, 164, 18);
+    animation: movement 1s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes movement{
+
+    from {margin-left: 30px;}
+    to {margin-right: 30px;}
+}
+
+.add-btn button span{
+    margin: 0px 15px;
+    color: rgb(255, 255, 255);
+    font-size: 1.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+.add-btn button{
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+}
+.add-btn button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(255, 179, 0);
+    box-shadow: 5px 5px 10px grey;
+    transition:all ease 0.2s;
+    
+}
+
+
+
+/* notes area */
+
+
+
+.task-no {
+display: flex;
+font-size: 1rem;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-weight: 600;
+padding: 10px 0px ;
+margin-right:50%;
+}
+
+
+
+
+.notes-div{
+
+    background-color: rgb(255, 246, 227);
+    height: 200px;
+    width: 400px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    margin-top: 5rem;
+    margin-left:1rem ;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(114, 111, 111);
+}
+
+.notes-div:hover{
+
+    transform: translateY(-20px);
+    transition: 0.2s;
+    box-shadow: 5px 5px 15px rgb(150, 148, 148);
+}
+.notes-div .edit-del-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 10px;
+    background-color: rgb(255, 179, 0);
+}
+
+.notes-div .edit-del-btn button{
+    margin: 3px 6px;
+    font-size: 1.3rem;
+    cursor:pointer;
+    background: transparent;
+    border: none;
+
+}
+
+.notes-div .edit-del-btn button.edit:hover{
+  
+    color: rgb(188, 246, 192);
+    
+  
+}
+
+.notes-div .edit-del-btn button.delete:hover{
+  
+    color: red;
+  
+}
+
+
+.notes-div .main{
+
+    font-size: 1.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:0px 6px;
+}
+.notes-div .text-area{
+
+    width: 400px;
+    height: 200px;
+    border: transparent;
+    background-color: transparent ;
+    resize: none;
+    outline: none;
+    font-size: 1.2rem;
+     padding: 0px 5px;
+}
+
+.notes-div .text-area:active{
+    border: none;
+}
+
+
+.hidden{
+    display:none;
+}
+
+@media only screen and  (max-width:1250px){
+
+    .notes_container{
+
+
+        justify-content: space-around;
+    }
+
+
+    .notes-div{
+
+        width: 40%;  
+   }
+   
+
+
+
+
+}
+
+@media only screen and  (max-width:835px){
+
+    .notes-div{
+
+         width: 100%;
+         margin: 10px 20px;
+    }
+
+    
+
+}
+
+
